@@ -1,7 +1,7 @@
 ﻿regsvr32 /s hnetcfg.dll
 $MainAdapter = Get-NetAdapter | Where-Object {$_.Name -eq 'Wi-Fi'}                                                                                                  
 $ID = $MainAdapter.InterfaceGuid                                                                                                                                    
-$SecondAdapter = Get-NetAdapter | Where-Object {$_.Name -eq 'vEthernet (Virtual Switch Wifi)'}                                                                      
+$SecondAdapter = Get-NetAdapter | Where-Object {$_.Name -eq 'vEthernet (Hyper-V Switch (Wifi))'}                                                                      
 $ID2 = $SecondAdapter.InterfaceGuid                                                                                                                                 
 $m = New-Object -ComObject HNetCfg.HNetShare                                                                                                                        
 # $m.EnumEveryConnection |% { $m.NetConnectionProps.Invoke($_).Guid }                                                                                                 
